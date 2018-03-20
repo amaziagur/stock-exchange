@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-03-20T09:02:08" hostname="amazias-MacBook-Pro.local" time="0.318">
+  <properties/>
+  <testcase name="shouldBuyStock" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.066"/>
+  <testcase name="throwInsufficientFundsException" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.02"/>
+  <testcase name="throwStockNotFoundException" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.018"/>
+  <testcase name="throwStockAlreadyPurchased" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.026"/>
+  <testcase name="throwQuantityInvalid" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.017"/>
+  <testcase name="shouldSellNumberOfStocks" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.057"/>
+  <testcase name="shouldSellStock" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.036"/>
+  <testcase name="shouldBuyNumberOfStocks" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.044"/>
+  <testcase name="throwStockNotFoundExceptionGivenStockNowInPortfolio" classname="it.com.foresightautomotive.service.PortfolioPersistedServiceIT" time="0.027"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.com.foresightautomotive.repository.PortfolioRepositoryIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-20T09:02:07" hostname="amazias-MacBook-Pro.local" time="0.19">
+  <properties/>
+  <testcase name="shouldUpdateStock" classname="it.com.foresightautomotive.repository.PortfolioRepositoryIT" time="0.19"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+]]></system-err>
+</testsuite>

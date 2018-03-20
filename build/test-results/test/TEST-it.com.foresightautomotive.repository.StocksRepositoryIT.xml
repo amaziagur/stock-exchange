@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.com.foresightautomotive.repository.StocksRepositoryIT" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-03-20T09:02:07" hostname="amazias-MacBook-Pro.local" time="0.203">
+  <properties/>
+  <testcase name="shouldUpdateAllStocks" classname="it.com.foresightautomotive.repository.StocksRepositoryIT" time="0.105"/>
+  <testcase name="shouldReceiveListOfStocks" classname="it.com.foresightautomotive.repository.StocksRepositoryIT" time="0.026"/>
+  <testcase name="shouldUpdateStockPrice" classname="it.com.foresightautomotive.repository.StocksRepositoryIT" time="0.034"/>
+  <testcase name="shouldReceiveStocksBySearchString" classname="it.com.foresightautomotive.repository.StocksRepositoryIT" time="0.021"/>
+  <testcase name="shouldHandleSpacesInSearchString" classname="it.com.foresightautomotive.repository.StocksRepositoryIT" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

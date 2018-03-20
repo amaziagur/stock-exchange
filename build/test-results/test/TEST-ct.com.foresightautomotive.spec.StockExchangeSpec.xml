@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ct.com.foresightautomotive.spec.StockExchangeSpec" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-03-20T09:02:33" hostname="amazias-MacBook-Pro.local" time="0.87">
+  <properties/>
+  <testcase name="should search stock by letter" classname="ct.com.foresightautomotive.spec.StockExchangeSpec" time="0.414"/>
+  <testcase name="should buy stock" classname="ct.com.foresightautomotive.spec.StockExchangeSpec" time="0.187"/>
+  <testcase name="should sell stock" classname="ct.com.foresightautomotive.spec.StockExchangeSpec" time="0.122"/>
+  <testcase name="should update stock prices" classname="ct.com.foresightautomotive.spec.StockExchangeSpec" time="0.146"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.1.RELEASE)
+
+2018-03-20 11:02:25.013  INFO 13927 --- [    Test worker] o.s.b.SpringApplication                  : Starting application on amazias-MacBook-Pro.local with PID 13927 (started by amaziagur in /Users/amaziagur/code/stock-exchange)
+2018-03-20 11:02:25.015  INFO 13927 --- [    Test worker] o.s.b.SpringApplication                  : No active profile set, falling back to default profiles: default
+2018-03-20 11:02:25.064  INFO 13927 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e2703f3: startup date [Tue Mar 20 11:02:25 IST 2018]; root of context hierarchy
+2018-03-20 11:02:27.258  INFO 13927 --- [    Test worker] o.e.j.u.log                              : Logging initialized @38144ms
+2018-03-20 11:02:27.436  INFO 13927 --- [    Test worker] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2018-03-20 11:02:27.444  INFO 13927 --- [    Test worker] o.e.j.s.Server                           : jetty-9.3.11.v20160721
+2018-03-20 11:02:27.643  INFO 13927 --- [    Test worker] application                              : Initializing Spring embedded WebApplicationContext
+2018-03-20 11:02:27.643  INFO 13927 --- [    Test worker] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2579 ms
+2018-03-20 11:02:27.975  INFO 13927 --- [    Test worker] o.s.b.w.s.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-20 11:02:27.980  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'metricsFilter' to: [/*]
+2018-03-20 11:02:27.981  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-20 11:02:27.981  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-20 11:02:27.982  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-20 11:02:27.982  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-20 11:02:27.983  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2018-03-20 11:02:27.984  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'CORSFilter' to: [/*]
+2018-03-20 11:02:27.984  INFO 13927 --- [    Test worker] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018-03-20 11:02:28.211  INFO 13927 --- [    Test worker] o.e.j.s.h.ContextHandler                 : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@372a022f{/stock-exchange-service,file:///private/var/folders/js/mbrp2r0x1zgc37gmx0zv2v2h0000gn/T/jetty-docbase.1729238750330572416.8080/,AVAILABLE}
+2018-03-20 11:02:28.211  INFO 13927 --- [    Test worker] o.e.j.s.Server                           : Started @39099ms
+2018-03-20 11:02:28.286  INFO 13927 --- [    Test worker] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-03-20 11:02:28.292  INFO 13927 --- [localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:7, serverValue:7}] to localhost:27017
+2018-03-20 11:02:28.294  INFO 13927 --- [localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 2]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=1063071}
+2018-03-20 11:02:28.393  INFO 13927 --- [    Test worker] o.m.d.connection                         : Opened connection [connectionId{localValue:8, serverValue:8}] to localhost:27017
+2018-03-20 11:02:29.372  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.foresightautomotive.managment.ManagementController.reset()
+2018-03-20 11:02:29.374  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/management/refresh],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.foresightautomotive.managment.ManagementController.refresh()
+2018-03-20 11:02:29.375  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/portfolio],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.foresightautomotive.portfolio.Portfolio> com.foresightautomotive.portfolio.PortfolioController.portfolio()
+2018-03-20 11:02:29.376  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/market/search],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.foresightautomotive.search.SearchResponse> com.foresightautomotive.stock.market.StockMarketController.search(com.foresightautomotive.search.SearchData)
+2018-03-20 11:02:29.377  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/market/buy],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.foresightautomotive.transactions.TransactionResponse> com.foresightautomotive.stock.market.StockMarketController.buyStock(com.foresightautomotive.transactions.BuyRequest)
+2018-03-20 11:02:29.377  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/market/sell],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.foresightautomotive.transactions.TransactionResponse> com.foresightautomotive.stock.market.StockMarketController.sellStock(com.foresightautomotive.transactions.SellRequest)
+2018-03-20 11:02:29.378  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/market],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.foresightautomotive.search.SearchResponse> com.foresightautomotive.stock.market.StockMarketController.stocksInformation(java.lang.String[])
+2018-03-20 11:02:29.379  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-03-20 11:02:29.384  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-03-20 11:02:29.385  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-03-20 11:02:29.386  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-03-20 11:02:29.389  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-20 11:02:29.390  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-20 11:02:29.693  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-03-20 11:02:29.697  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.700  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.702  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.704  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2018-03-20 11:02:29.706  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.707  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.710  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-03-20 11:02:29.710  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.712  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.720  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-03-20 11:02:29.722  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:29.724  INFO 13927 --- [    Test worker] o.s.b.a.e.m.EndpointHandlerMapping       : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-03-20 11:02:30.115  INFO 13927 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e2703f3: startup date [Tue Mar 20 11:02:25 IST 2018]; root of context hierarchy
+2018-03-20 11:02:30.231  INFO 13927 --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 11:02:30.232  INFO 13927 --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/src/main/webapp/resources/swagger-ui/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 11:02:30.232  INFO 13927 --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 11:02:30.292  INFO 13927 --- [    Test worker] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-20 11:02:31.833  INFO 13927 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-20 11:02:31.847  INFO 13927 --- [    Test worker] o.s.c.s.DefaultLifecycleProcessor        : Starting beans in phase 0
+2018-03-20 11:02:31.955  INFO 13927 --- [    Test worker] o.s.c.s.DefaultLifecycleProcessor        : Starting beans in phase 2147483647
+2018-03-20 11:02:31.956  INFO 13927 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-03-20 11:02:32.006  INFO 13927 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-03-20 11:02:32.053  INFO 13927 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-03-20 11:02:32.581  INFO 13927 --- [    Test worker] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-03-20 11:02:32.607  INFO 13927 --- [    Test worker] application                              : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-20 11:02:32.607  INFO 13927 --- [    Test worker] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-20 11:02:32.638  INFO 13927 --- [    Test worker] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-03-20 11:02:32.680  INFO 13927 --- [    Test worker] o.e.j.s.AbstractConnector                : Started ServerConnector@14046629{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-03-20 11:02:32.685  INFO 13927 --- [    Test worker] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2018-03-20 11:02:32.690  INFO 13927 --- [    Test worker] o.s.b.SpringApplication                  : Started application in 23.66 seconds (JVM running for 43.579)
+2018-03-20 11:02:34.077  INFO 13927 --- [tp1401843498-27] c.f.r.StocksRepositoryImpl               : going to update prices
+2018-03-20 11:02:34.130  INFO 13927 --- [tp1401843498-27] c.f.r.StocksRepositoryImpl               : finished to update prices
+2018-03-20 11:02:34.227  INFO 13927 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e2703f3: startup date [Tue Mar 20 11:02:25 IST 2018]; root of context hierarchy
+2018-03-20 11:02:34.229  INFO 13927 --- [    Test worker] o.s.c.s.DefaultLifecycleProcessor        : Stopping beans in phase 2147483647
+2018-03-20 11:02:34.231  INFO 13927 --- [    Test worker] o.s.c.s.DefaultLifecycleProcessor        : Stopping beans in phase 0
+2018-03-20 11:02:34.232  INFO 13927 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-20 11:02:34.236  INFO 13927 --- [    Test worker] o.m.d.connection                         : Closed connection [connectionId{localValue:8, serverValue:8}] to localhost:27017 because the pool has been closed.
+2018-03-20 11:02:34.250  INFO 13927 --- [    Test worker] o.e.j.s.AbstractConnector                : Stopped ServerConnector@14046629{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2018-03-20 11:02:34.253  INFO 13927 --- [    Test worker] application                              : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2018-03-20 11:02:34.254  INFO 13927 --- [    Test worker] o.e.j.s.h.ContextHandler                 : Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@372a022f{/stock-exchange-service,file:///private/var/folders/js/mbrp2r0x1zgc37gmx0zv2v2h0000gn/T/jetty-docbase.1729238750330572416.8080/,UNAVAILABLE}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

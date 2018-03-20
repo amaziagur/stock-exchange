@@ -1,0 +1,13 @@
+server:
+ host: 0.0.0.0
+ port: 8080
+ contextPath: /stock-exchange-service
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_HOST}
+
+foresight:
+  cron:
+      refresh: "*/60 * * * * *"
